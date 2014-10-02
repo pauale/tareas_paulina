@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+<title>Repaso</title>
+
+    <style type="text/css" media="screen">	
+	.cuadro{
+		width:50px;
+		height:50px;
+		margin: 5px;
+		float: left;
+	}
+
+	</style>
+  
+
+</head>
+<body>
+
+<button onClick="myFunction()">Ejecutar</button>
+<input type="text" id="numero" value=""></input>
+<div id="demo"></div>	
+
+    <script>
+	colores = ["red", "black", "green", "yellow", "purple", "grey"]
+		function myFunction(){
+			var text = "";
+			var i;
+			numerousuario = document.getElementById("numero").value;
+			for (i = 1; i <= numerousuario; i++){
+			aleatorio = Math.floor(Math.random() *colores.length);
+				jQuery("#demo").append('<div class="cuadro" style="background:' + colores [aleatorio] + '"></div>')
+			}
+
+		$(".cuadro").mouseenter( function(){
+				$(this).animate({
+							width:"100px",
+							height: "100px",
+							},100)
+
+		});
+
+		$(".cuadro").mouseleave( function(){
+				$(this).animate({
+							width:"50px",
+							height: "50px",
+							},100)
+		});
+
+		
+
+		};
+
+</script>
+</body>
+</html>
