@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fondo Aleatorio</title>
+
+	<script type="text/javascript" charset="UTF-8">
+		function suma(v1, v2){
+			alert(v1 * v2);
+		};
+
+		var colores = ["#068892", "#eeac1f", "#ee1fe2", "#ee1f2d", "#ee3013", "#eee613", "#13e3ee", "#13ee17", "#ee1384", "#ee6013"];
+
+
+		function cambiaFondo(){
+			aleotorio = Math.floor(Math.random() * colores.length); 
+
+			document.body.style.backgroundColor = colores[aleotorio];
+		};
+
+		function escribirpais(){
+		document.getElementById("textopais").innerHTML = document.getElementById("pais").value;
+
+		}
+	</script>
+
+		<style type="text/css" media="screen">
+			#textopais{
+				font-size: 100px;
+				text-align: center;
+			}
+		</style>
+
+</head>
+
+<body>
+	<!--<input id="cambiaFondo" type="button" value="cambiaFondo" onclick="cambiaFondo();" />-->
+	<input type="text" name="pais" id="pais">
+	<input id="botonpais" type="button" value="escrbir pais" onclick="escribirpais();" />
+
+		<div id="textopais"></div>
+
+
+
+	<script type="text/javascript" charset="UTF-8">
+		//suma(6,5);
+		//cambiaFondo();
+		document.getElementById("pais").value = "japon"
+	</script>
+	
+</body>
+</html> 
